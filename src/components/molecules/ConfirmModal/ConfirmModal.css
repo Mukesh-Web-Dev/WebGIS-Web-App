@@ -1,0 +1,56 @@
+/* ConfirmModal Molecule Styles */
+
+.confirm-modal {
+    padding: 24px;
+}
+
+.confirm-modal__header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.confirm-modal__icon {
+    flex-shrink: 0;
+}
+
+.confirm-modal--danger .confirm-modal__icon {
+    color: var(--semantic-red);
+}
+
+.confirm-modal--warning .confirm-modal__icon {
+    color: #E6A649;
+}
+
+.confirm-modal--info .confirm-modal__icon {
+    color: var(--semantic-blue);
+}
+
+.confirm-modal__title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.confirm-modal__body {
+    margin-bottom: 24px;
+}
+
+.confirm-modal__message {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.confirm-modal__footer {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.confirm-modal__button {
+    min-width: 100px;
+}

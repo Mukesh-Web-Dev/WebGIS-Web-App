@@ -1,0 +1,54 @@
+/* LayerList Organism Styles */
+
+.layer-list-container {
+    /* Inherits panel-section card styles from global */
+}
+
+.layer-list__header {
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #4AE661;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.layer-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+}
+
+/* Custom scrollbar */
+.layer-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.layer-list::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+}
+
+.layer-list::-webkit-scrollbar-thumb {
+    background: rgba(74, 230, 97, 0.3);
+    border-radius: 3px;
+}
+
+.layer-list::-webkit-scrollbar-thumb:hover {
+    background: rgba(74, 230, 97, 0.5);
+}
+
+/* Empty state */
+.layer-list:empty::after {
+    content: 'No layers added';
+    display: block;
+    text-align: center;
+    padding: 8px;
+    color: #888;
+    font-size: 14px;
+}

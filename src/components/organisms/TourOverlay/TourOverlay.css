@@ -1,0 +1,50 @@
+/**
+ * TourOverlay Styles
+ * 
+ * Dark backdrop with spotlight cutout effect
+ */
+
+.tour-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 18;
+    /* Below tour step (9999) but above everything else */
+    pointer-events: none;
+    /* Allow clicks through to highlighted element */
+}
+
+.tour-overlay__backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    animation: tour-overlay-fade-in 0.3s ease;
+}
+
+.tour-overlay__spotlight {
+    position: absolute;
+    box-shadow:
+        0 0 0 9999px rgba(0, 0, 0, 0.7),
+        0 0 20px rgba(74, 230, 97, 0.5),
+        inset 0 0 20px rgba(74, 230, 97, 0.3);
+    border: 2px solid rgba(74, 230, 97, 0.8);
+    transition: all 0.4s ease;
+    pointer-events: none;
+    z-index:420;
+}
+
+/* Fade in animation */
+@keyframes tour-overlay-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

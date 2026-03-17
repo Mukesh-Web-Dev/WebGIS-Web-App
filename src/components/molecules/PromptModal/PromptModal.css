@@ -1,0 +1,60 @@
+/* PromptModal Molecule Styles */
+
+.prompt-modal {
+    padding: 24px;
+}
+
+.prompt-modal__header {
+    margin-bottom: 20px;
+}
+
+.prompt-modal__title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.prompt-modal__body {
+    margin-bottom: 24px;
+}
+
+.prompt-modal__message {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-dark);
+    margin: 0 0 16px 0;
+}
+
+.prompt-modal__input {
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 2px solid rgba(134, 224, 207, 0.3);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--text-dark);
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.prompt-modal__input:focus {
+    outline: none;
+    border-color: var(--primary-teal);
+    box-shadow: 0 0 0 3px rgba(134, 224, 207, 0.1);
+}
+
+.prompt-modal__input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.prompt-modal__error {
+    margin: 8px 0 0 0;
+    font-size: 13px;
+    color: var(--semantic-red);
+}
+
+.prompt-modal__footer {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}

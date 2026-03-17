@@ -1,0 +1,164 @@
+/**
+ * WelcomePrompt Styles
+ * 
+ * Glassmorphic welcome dialog for first-time users
+ */
+
+.welcome-prompt {
+    max-width: 500px;
+    padding: 32px;
+    text-align: center;
+}
+
+.welcome-prompt__icon {
+    font-size: 64px;
+    margin-bottom: 16px;
+    animation: welcome-bounce 1s ease-in-out;
+}
+
+.welcome-prompt__title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-dark, #262D24);
+    margin: 0 0 16px 0;
+    background: linear-gradient(135deg, #4AE661 0%, #86E0CF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.welcome-prompt__description {
+    font-size: 16px;
+    color: var(--text-dark, #262D24);
+    margin: 0 0 24px 0;
+    line-height: 1.6;
+}
+
+.welcome-prompt__features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.welcome-prompt__feature {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    background: rgba(134, 224, 207, 0.1);
+    border: 1px solid rgba(134, 224, 207, 0.3);
+    border-radius: 8px;
+    font-size: 13px;
+    color: var(--text-dark, #262D24);
+    transition: all 0.2s ease;
+}
+
+.welcome-prompt__feature:hover {
+    background: rgba(134, 224, 207, 0.2);
+    border-color: rgba(134, 224, 207, 0.5);
+}
+
+.feature-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.welcome-prompt__question {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark, #262D24);
+    margin: 24px 0 20px 0;
+}
+
+.welcome-prompt__actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.welcome-prompt__btn {
+    flex: 1;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.welcome-prompt__btn--primary {
+    background: linear-gradient(135deg,
+            rgba(74, 230, 97, 0.9) 0%,
+            rgba(133, 230, 146, 0.8) 100%);
+    color: #000;
+    border: 2px solid rgba(74, 230, 97, 0.6);
+    box-shadow: 0 4px 12px rgba(74, 230, 97, 0.3);
+}
+
+.welcome-prompt__btn--primary:hover {
+    background: linear-gradient(135deg,
+            rgba(74, 230, 97, 1) 0%,
+            rgba(133, 230, 146, 0.9) 100%);
+    border-color: rgba(74, 230, 97, 0.8);
+    box-shadow: 0 6px 16px rgba(74, 230, 97, 0.4);
+    transform: translateY(-2px);
+}
+
+.welcome-prompt__btn--secondary {
+    background: rgba(134, 224, 207, 0.15);
+    color: var(--text-dark, #262D24);
+    border: 2px solid rgba(134, 224, 207, 0.4);
+}
+
+.welcome-prompt__btn--secondary:hover {
+    background: rgba(134, 224, 207, 0.25);
+    border-color: rgba(134, 224, 207, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Bounce animation */
+@keyframes welcome-bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .welcome-prompt {
+        padding: 24px;
+    }
+
+    .welcome-prompt__icon {
+        font-size: 48px;
+    }
+
+    .welcome-prompt__title {
+        font-size: 24px;
+    }
+
+    .welcome-prompt__features {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-prompt__actions {
+        flex-direction: column;
+    }
+
+    .welcome-prompt__btn {
+        width: 100%;
+    }
+}

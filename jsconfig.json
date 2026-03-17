@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "baseUrl": "src",
+        "paths": {
+            "@/components/*": [
+                "components/*"
+            ],
+            "@/features/*": [
+                "features/*"
+            ],
+            "@/shared/*": [
+                "shared/*"
+            ],
+            "@/styles/*": [
+                "styles/*"
+            ]
+        },
+        "target": "es6",
+        "module": "commonjs",
+        "jsx": "react"
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "build",
+        "dist"
+    ]
+}

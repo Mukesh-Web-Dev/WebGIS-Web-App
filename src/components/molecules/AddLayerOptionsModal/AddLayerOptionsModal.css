@@ -1,0 +1,243 @@
+/**
+ * AddLayerOptionsModal Styles
+ * 
+ * Glassmorphic overlay with two-option card layout
+ */
+
+/* Overlay Backdrop */
+.add-layer-options-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 16;
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Dialog Container */
+.add-layer-options-dialog {
+  background: linear-gradient(136deg, rgba(134, 224, 207, 0.4) 100%);
+  border: 1px solid rgba(134, 224, 207, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.7),
+    0 0 20px rgba(134, 224, 207, 0.15) inset,
+    0 4px 16px rgba(73, 230, 148, 0.2);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow: hidden;
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Header */
+.add-layer-options-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(134, 224, 207, 0.2);
+}
+
+.add-layer-options-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.add-layer-options-close {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: rgba(38, 45, 36, 0.6);
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.add-layer-options-close:hover {
+  background: rgba(134, 224, 207, 0.2);
+  color: var(--text-dark);
+}
+
+/* Content */
+.add-layer-options-content {
+  padding: 24px;
+}
+
+.add-layer-options-subtitle {
+  margin: 0 0 20px 0;
+  font-size: 14px;
+  color: rgba(38, 45, 36, 0.7);
+  font-weight: 500;
+}
+
+/* Options Grid */
+.add-layer-options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Option Card */
+.add-layer-option-card {
+  background: linear-gradient(136deg, rgba(134, 224, 207, 0.4) 100%);
+  border: 2px solid rgba(134, 224, 207, 0.3);
+  border-radius: 8px;
+  padding: 24px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.add-layer-option-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(136deg, rgba(134, 224, 207, 0.4) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.add-layer-option-card:hover {
+  border-color: rgba(134, 224, 207, 0.6);
+  transform: translateY(-4px);
+  box-shadow: 
+    0 8px 24px rgba(134, 224, 207, 0.3),
+    0 0 20px rgba(73, 230, 148, 0.2);
+}
+
+.add-layer-option-card:hover::before {
+  opacity: 1;
+}
+
+.add-layer-option-card:active {
+  transform: translateY(-2px);
+}
+
+/* Icon */
+.add-layer-option-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.upload-icon {
+  animation: float 3s ease-in-out infinite;
+}
+
+.create-icon {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Text */
+.add-layer-option-title {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-dark);
+  position: relative;
+  z-index: 1;
+}
+
+.add-layer-option-description {
+  margin: 0 0 12px 0;
+  font-size: 13px;
+  color: rgba(38, 45, 36, 0.7);
+  line-height: 1.4;
+  position: relative;
+  z-index: 1;
+}
+
+.add-layer-option-formats {
+  font-size: 11px;
+  color: rgba(38, 45, 36, 0.5);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .add-layer-options-dialog {
+    width: 95%;
+    max-width: none;
+  }
+
+  .add-layer-options-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .add-layer-options-header {
+    padding: 16px 20px;
+  }
+
+  .add-layer-options-content {
+    padding: 20px;
+  }
+
+  .add-layer-option-card {
+    padding: 20px 16px;
+  }
+}

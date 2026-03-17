@@ -1,0 +1,33 @@
+/* ColorSwatch Atom Styles */
+
+.color-swatch {
+    width: 32px;
+    height: 32px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0;
+    outline: none;
+}
+
+.color-swatch:hover {
+    transform: scale(1.1);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.color-swatch:active {
+    transform: scale(1.05);
+}
+
+.color-swatch--selected {
+    border-color: #4AE661;
+    border-width: 3px;
+    box-shadow: 0 0 12px rgba(74, 230, 97, 0.6);
+}
+
+.color-swatch:focus-visible {
+    outline: 2px solid #4AE661;
+    outline-offset: 2px;
+}

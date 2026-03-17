@@ -1,0 +1,92 @@
+/**
+ * TourButton Styles
+ * 
+ * Floating button positioned at left-center with pulse animation
+ */
+
+.tour-button {
+    position: fixed;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 18;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+
+    padding: 7px;
+    background: linear-gradient(135deg,
+            rgba(74, 230, 97, 0.95) 0%,
+            rgba(133, 230, 146, 0.9) 100%);
+    border: 2px solid rgba(74, 230, 97, 0.8);
+    border-radius: 12px;
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(74, 230, 97, 0.4);
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    /* Pulse animation to attract attention */
+    animation: tour-pulse 2s infinite;
+}
+
+.tour-button:hover {
+    transform: translateY(-50%) scale(1.05);
+    box-shadow:
+        0 6px 24px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(74, 230, 97, 0.6);
+    border-color: rgba(74, 230, 97, 1);
+}
+
+.tour-button:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.tour-button__icon {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.tour-button__text {
+    font-size: 11px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Pulse animation */
+@keyframes tour-pulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 4px 16px rgba(0, 0, 0, 0.3),
+            0 0 20px rgba(74, 230, 97, 0.4);
+    }
+
+    50% {
+        box-shadow:
+            0 4px 16px rgba(0, 0, 0, 0.3),
+            0 0 40px rgba(74, 230, 97, 0.7);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .tour-button {
+        left: 10px;
+        padding: 10px 6px;
+    }
+
+    .tour-button__icon {
+        font-size: 20px;
+    }
+
+    .tour-button__text {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,186 @@
+/* ExportLayerModal Styles */
+
+.export-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 16;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.export-modal-content {
+    background: linear-gradient(136deg, rgba(134, 224, 207, 0.4) 100%);
+    padding: 24px;
+    border-radius: 12px;
+    width: 360px;
+    max-width: 90vw;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(134, 224, 207, 0.3);
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.export-modal-title {
+    margin: 0 0 20px 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    border-bottom: 2px solid rgba(134, 224, 207, 0.5);
+    padding-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.export-layer-name {
+    font-size: 13px;
+    font-weight: normal;
+    color: #4AE661;
+    font-style: italic;
+}
+
+.export-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.export-option-btn {
+    padding: 14px 16px;
+    border: 2px solid rgba(134, 224, 207, 0.3);
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.9) 0%,
+            rgba(250, 252, 255, 0.95) 100%);
+    text-align: left;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.export-option-btn:hover {
+    background: linear-gradient(135deg,
+            rgba(134, 224, 207, 0.15) 0%,
+            rgba(73, 230, 148, 0.1) 100%);
+    border-color: rgba(134, 224, 207, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(134, 224, 207, 0.3);
+}
+
+.export-option-btn:active {
+    transform: translateY(0);
+}
+
+.export-option-label {
+    display: block;
+    font-weight: 600;
+    font-size: 15px;
+    color: #1a1a1a;
+}
+
+.export-option-desc {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.export-cancel-btn {
+    margin-top: 12px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    color: #d9534f;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.export-cancel-btn:hover {
+    background: rgba(217, 83, 79, 0.1);
+}
+
+/* Processing State */
+.export-processing {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+}
+
+.export-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(134, 224, 207, 0.2);
+    border-top-color: #4AE661;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 16px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.export-processing p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .export-modal-content {
+        width: 320px;
+        padding: 20px;
+    }
+
+    .export-modal-title {
+        font-size: 18px;
+    }
+
+    .export-option-btn {
+        padding: 12px 14px;
+    }
+
+    .export-option-label {
+        font-size: 14px;
+    }
+
+    .export-option-desc {
+        font-size: 11px;
+    }
+}
