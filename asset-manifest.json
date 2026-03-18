@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/WebGIS-Web-App/static/css/main.a04e129c.css",
+    "main.js": "/WebGIS-Web-App/static/js/main.66138695.js",
+    "static/js/159.c759640a.chunk.js": "/WebGIS-Web-App/static/js/159.c759640a.chunk.js",
+    "static/js/350.9e0f3b2a.chunk.js": "/WebGIS-Web-App/static/js/350.9e0f3b2a.chunk.js",
+    "static/js/823.5bf2187f.chunk.js": "/WebGIS-Web-App/static/js/823.5bf2187f.chunk.js",
+    "static/js/346.a2f7c8b8.chunk.js": "/WebGIS-Web-App/static/js/346.a2f7c8b8.chunk.js",
+    "static/js/453.a58c0e1e.chunk.js": "/WebGIS-Web-App/static/js/453.a58c0e1e.chunk.js",
+    "index.html": "/WebGIS-Web-App/index.html",
+    "main.a04e129c.css.map": "/WebGIS-Web-App/static/css/main.a04e129c.css.map",
+    "main.66138695.js.map": "/WebGIS-Web-App/static/js/main.66138695.js.map",
+    "159.c759640a.chunk.js.map": "/WebGIS-Web-App/static/js/159.c759640a.chunk.js.map",
+    "350.9e0f3b2a.chunk.js.map": "/WebGIS-Web-App/static/js/350.9e0f3b2a.chunk.js.map",
+    "346.a2f7c8b8.chunk.js.map": "/WebGIS-Web-App/static/js/346.a2f7c8b8.chunk.js.map",
+    "453.a58c0e1e.chunk.js.map": "/WebGIS-Web-App/static/js/453.a58c0e1e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a04e129c.css",
+    "static/js/main.66138695.js"
+  ]
+}
